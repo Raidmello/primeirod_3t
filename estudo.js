@@ -1,5 +1,5 @@
-let nome = "Maria";
-let número = 35; 
+let nome = "Raul";
+let número = 28; 
 let turma = "D";
 let série = "1";
 
@@ -18,4 +18,19 @@ function escreva (){
     document.write(tabuada + " X 8 = "+(tabuada*8)+"<br>");
     document.write(tabuada + " X 9 = "+(tabuada*9)+"<br>");
     document.write(tabuada + " X 10 = "+(tabuada*10)+"<br>");
+}
+function repete(){
+    for(let i = 1; i <= 10; i++){
+        document.write("Tabuada do " + i + "<br>");
+        for(let j =1; j <= 10; j++){
+     document.write(i + " x " + j + " = "+(j*i)+"<br>");
+    }
+    document.write("<br>");
+    }
+}
+
+let lista = ["Banana", "Uva", "Abacate", "Tomate"];
+
+function minhaLista(){
+    document.write(lista[3])
 }
