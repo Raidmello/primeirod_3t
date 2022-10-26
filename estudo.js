@@ -21,26 +21,28 @@ function total(){
 
   if (!Number(j)){
     alert("bota número sua anta");
-    document.getElementById("valor").value = "";
-    document.getElementById("valor").focus();
+    document.getElementById("juros").value = "";
+    document.getElementById("juros").focus();
     return 
   }
 
   if (!Number(t)){
     alert("bota número sua anta");
-    document.getElementById(" valor").value = "";
-    document.getElementById("valor").focus();
-    return 
+    document.getElementById("meses").value = "";
+    document.getElementById("meses").focus();
+    return;
   }
   
-  
+  let mes= "";
   let r = 0;
   for(let i = 1; i <= t; i++){
       r = c * (1 + (j/100));
-      document.write("Mês " + i + " valor: " + moeda(r) +"<br>");
+      "Mês: "+ i + "valor " + moeda(r) + "<br>";  
+     // document.write("Mês " + i + " valor: " + moeda(r) +"<br>");
       c = r;
   }
-  document.write("Resultado: " + moeda(r));
+  document.getElementById("total").innerHTML="Total: "+moeda(r);
+  //document.write("Resultado: " + moeda(r));
 }
 
 
