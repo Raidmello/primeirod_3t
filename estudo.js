@@ -1,85 +1,53 @@
+
+
 function moeda(atual){
-  return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
-
-let nome = "Raul";
-let número = 28; 
-let turma = "D";
-let série = "1";
-
 
 function total(){
   let c = document.getElementById("valor").value;
   let j = document.getElementById("juros").value;
   let t = document.getElementById("meses").value;
-  if (!Number(c)){
-    alert("bota número sua anta");
-    document.getElementById("valor").value = "";
-    document.getElementById("valor").focus();
-    return 
+  let r = moeda;
+
+
+  if(!Number(c)){
+      
+   alert("O capital deve ser numeros.");
+   document.getElementById("valor").value = "";
+   document.getElementById("valor").focus();
+   return;
   }
 
-  if (!Number(j)){
-    alert("bota número sua anta");
+  if(!Number(j)){   
+    alert("O juros deve ser numeros.");
     document.getElementById("juros").value = "";
     document.getElementById("juros").focus();
-    return 
-  }
+    return;
+   }
 
-  if (!Number(t)){
-    alert("bota número sua anta");
+   if(!Number(t)){
+    alert("O meses deve ser numeros.");
     document.getElementById("meses").value = "";
     document.getElementById("meses").focus();
     return;
+   
   }
-  
-  let mes= "";
-  let r = 0;
+  let mes = "";
+
   for(let i = 1; i <= t; i++){
       r = c * (1 + (j/100));
-      "Mês: "+ i + "valor " + moeda(r) + "<br>";  
-     // document.write("Mês " + i + " valor: " + moeda(r) +"<br>");
+     mes += "mês" = i =" valor "+ moeda(r) + "<br>";
+      //  document.write("Mês " + i + " valor: " + moeda(r) +"<br>");
       c = r;
   }
-  document.getElementById("total").innerHTML="Total: "+moeda(r);
-  //document.write("Resultado: " + moeda(r));
-}
+  document.getElementById("total").innerHTML= "Total: " + moeda(r);
+  // document.write("Resultado: " + moeda(r));
 
-
-function adicao(){
-let val1 = document.getElementById("v1").value;
-let val2 = document.getElementById("v2").value;
-let r = Number(val1) + Number(val2);
-document.getElementById("resultado").innerHTML =r;
-}
-
-function subtracao(){
-  let val1 = document.getElementById("v1").value;
-  let val2 = document.getElementById("v2").value;
-  let r = Number(val1) - Number(val2);
-  document.getElementById("resultado").innerHTML =r;
-  }
-
-  function divisao(){
-    let val1 = document.getElementById("v1").value;
-    let val2 = document.getElementById("v2").value;
-    let r = Number(val1) / Number(val2);
-    document.getElementById("resultado").innerHTML =r;
-    }
+  for(let i = 1; i <= t; i++){
+    r = c * (1 + (j/100));
+ 
+   
+};
   
-    function multiplicacao(){
-      let val1 = document.getElementById("v1").value;
-      let val2 = document.getElementById("v2").value;
-      let r = Number(val1) * Number(val2);
-      document.getElementById("resultado").innerHTML =r;
-      }
-      function porcentagem(){
-        let val1 = document.getElementById("v1").value;
-        let val2 = document.getElementById("v2").value;
-        let c = 100
-        let p = Number(val2)  / Number(c)
-        let r = Number(val1) * Number(p);
-        document.getElementById("resultado").innerHTML =r;
-        }
-
-  
+}
