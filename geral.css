@@ -26,4 +26,23 @@
 #sptotal {
     color: #4ddbdb;
     background: #081424;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+ h3 {
+     color:brown;
+ }
+ .calcF{
+  display: none;
+
+ }
+
+ #input-calcF{
+    display: none;
+
+}
+#input-calcF:checked + #calculadora .calcF {
+    display:block;
 }
