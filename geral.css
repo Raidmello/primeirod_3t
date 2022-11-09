@@ -4,28 +4,43 @@
     color: gray;
     text-align: center;
     border-radius: 10px;
+    box-shadow: 5px 5px chartreuse;
 }
-
+#calculadora input:focus{
+    background: black;
+    color: white;
+}
+.spMes{
+    border-color: black;
+    border-width: 1px;
+    border-style: dashed;
+    color: red;
+    background: blanchedalmond;
+    text-align: start;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+}
 #calculadora input {
-    background: #white;
+    background: red;
     color: #dce7f7;
 }
 
 #calculadora button {
     color: #4ddbdb;
-    background-color: #081424;
+    background-color: black;
 }
 
 
 #calculadora button:hover {
-    color: #081424;
+    color: #929396;
     background-color: #4ddbdb;
         cursor: col-resize;
 }
 
 #sptotal {
     color: #4ddbdb;
-    background: #081424;
+    background: #e1edfd;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
