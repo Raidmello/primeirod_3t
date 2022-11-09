@@ -11,7 +11,31 @@
 </head>
 
 <body>
- <input type="checkbox" id ="input-calcF">
+ <input type="checkbox" id ="input-calcEqSG">
+ 
+   <div id="calculadoraESC">
+       <label for="input-calcEqSG">
+           <h3> Equação <br>Segundo Grau</h3>
+      </label>
+      <div class="calcES"> 
+         
+      <div id="spRaiz">
+         <b> <i>
+         <span id="Total">Total: 0,00</span> <br> </b></i>
+      </div>
+      a: <input id="a" type="text"> <br>
+      b: <input id="b" type="text"> <br>
+      c: <input id="c" type="text"> <br>
+      <button onclick="calculaRaiz()">Calcula</button>
+      
+
+         <div class="spMes">
+      <span id="mes">Meses</span>
+      </div>
+   </div>
+   </div>
+   <div>
+   <input type="checkbox" id ="input-calcF">
  
    <div id="calculadora">
        <label for="input-calcF">
@@ -27,10 +51,14 @@
       Juros Mensais: <input id="juros" type="text"> <br>
       Nr. de Meses: <input id="meses" type="text"> <br>
       <button onclick="total()">Calcula</button>
-   </div>
-   <div>
+      
+
+         <div class="spMes">
       <span id="mes">Meses</span>
+      </div>
    </div>
+   </div>
+      
 
    <br><br><br>
    <span id="resultado"></span><br><br>
